@@ -14,10 +14,10 @@ int main(void)
 	h1.pratiPotrosnju(4, 2018, 40);
 	h1.pratiPotrosnju(5, 2018, 40);
 	h1.pratiPotrosnju(6, 2018, 40);
-	h1.pratiPotrosnju(3, 2019, 50);
-	h1.pratiPotrosnju(4, 2019, 50);
-	h1.pratiPotrosnju(5, 2019, 50);
-	h1.pratiPotrosnju(6, 2019, 50);
+	h1.pratiPotrosnju(3, 2019, 20);
+	h1.pratiPotrosnju(4, 2019, 20);
+	h1.pratiPotrosnju(5, 2019, 20);
+	h1.pratiPotrosnju(6, 2019, 20);
 	h1.velikiSkok();
 
 

@@ -4,6 +4,7 @@
 #include <chrono>
 #include <ctime> 
 #include <math.h>
+#include <stdlib.h>
 #include "hrana.h"
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -87,7 +88,7 @@ void Hrana::pratiPotrosnju(int mju, int godu, int portosnjau)
 	tm *ltm = localtime(&now);
 	int sadagod = (1900 + ltm->tm_year);
 	int sadamj = 1 + ltm->tm_mon;
-	std::cout << sadamj << " " << sadagod << std::endl;
+	//std::cout << sadamj << " " << sadagod << std::endl;
 	int trajanjemj = std::stoi(rokTrajanja.substr(3, 4));
 	int trjanjegod = std::stoi(rokTrajanja.substr(6, 9));
 	int rokMj = trajanjemj - sadamj;
@@ -103,18 +104,18 @@ void Hrana::pratiPotrosnju(int mju, int godu, int portosnjau)
 
 		for (unsigned int i = 0; i < mjesecnaPotrosnja.size(); i++) {
 			if (mjesecnaPotrosnja[i].god == godu) {
-				if (this->mjesecnaPotrosnja[i].mj == mju) {
+				if (mjesecnaPotrosnja[i].mj == mju) {
 					std::cout << "vec postoji";
 					break;
 				}
 			}
-
+		}
 			tmp.god = godu;
 			tmp.mj = mju;
 			tmp.kolicina = portosnjau;
 			mjesecnaPotrosnja.push_back(tmp);
-
-		}
+			std::cout << "dodano";
+		
 
 	}
 
@@ -125,10 +126,10 @@ void Hrana::velikiSkok()
 	char* dt = ctime(&now);
 	tm *ltm = localtime(&now);
 	int sadagod = (1900 + ltm->tm_year);
-
+	float promjena;
 	float ovogodisnja = 0, proslogodisnja = 0;
 
-	for (unsigned int i = 0; i < mjesecnaPotrosnja.size(); i++) {
+	for (int i = 0; i < mjesecnaPotrosnja.size(); i++) {
 		if (mjesecnaPotrosnja[i].god == sadagod) {
 			ovogodisnja += mjesecnaPotrosnja[i].kolicina;
 			
@@ -139,10 +140,18 @@ void Hrana::velikiSkok()
 		}
 	}
 
-	std::cout << "Current: " << ovogodisnja << std::endl;
-	std::cout << "Prev: " << proslogodisnja << std::endl;
-
-	
+	std::cout << "ova god: " << ovogodisnja << std::endl;
+	std::cout << "prosla god: " << proslogodisnja << std::endl;
+	promjena = ((ovogodisnja - proslogodisnja)/ovogodisnja) * 100;
+	std::cout << "promjena: " << promjena << "% "<<std::endl;
+	if (promjena > 10)
+	{
+		std::cout << "ovogodisnja potrosnja je porasla za: " << promjena << "% " << std::endl;
+	}
+	else if (promjena < -10)
+	{
+		std::cout << "ovogodisnja potrosnja je pala za: " << abs(promjena) << "% " << std::endl;
+	}
 }
 
 
