@@ -18,7 +18,7 @@ Vec3::Vec3()
 Vec3::~Vec3()
 {
 	std::cout << "destruktor";
-	
+	counter--;
 }
 
 std::istream& operator>>(std::istream &is, Vec3 &vec)
