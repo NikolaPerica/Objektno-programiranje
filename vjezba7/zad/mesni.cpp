@@ -1,5 +1,6 @@
 #include "zadatak1/hrana.h"
 #include "mesni.h"
+#include "pch.h"
 
 Mesni::Mesni(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog) :
 	Hrana(tip, ime, voda, protein, masti, ugljikohidrati, kolicina, rok)
@@ -13,13 +14,12 @@ Mesni::~Mesni()
 	std::cout << "destruktor mljecni\n";
 
 }
-float Mesni::getSamostalnaPotrosnja()
+
+
+std::ostream& operator<<(std::ostream &os, Mesni &mesni)
 {
-	return potrosnjaSamostalno;
-}
-float Mesni::getPrilogPotrosnja()
-{
-	return potrosnjaPrilog;
+	os << mesni.naziv << " " << mesni.potrosnjaSamostalno << " kg " << mesni.potrosnjaPrilog << "kg \n";
+	return os;
 }
 
 Meso::Meso(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog, std::string naziv) :

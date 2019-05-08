@@ -7,7 +7,7 @@
 #include <chrono>
 #include <ctime> 
 #include <math.h>
-#include<vector>
+#include <vector>
 #include "hrana.h"
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -24,7 +24,7 @@ public:
 
 class Hrana 
 {
-private:
+protected:
 	std::string vrsta;
 	std::string naziv;
 	std::string rokTrajanja; //(datum u formatu dd - mm - yyyy

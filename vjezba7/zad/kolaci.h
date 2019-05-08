@@ -19,6 +19,8 @@ public:
 	~Kolaci();
 	float getSamostalnaPotrosnja();
 	float getPrilogPotrosnja();
+	friend std::istream& operator>>(std::istream &input, Kolaci &kolac);
+	friend std::ostream& operator<<(std::ostream &output, Kolaci &kolac);
 };
 
 class Madarica : public Kolaci
