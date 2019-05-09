@@ -41,9 +41,9 @@ Potrosnja::Potrosnja()
 	 int rokMj = trajanjemj - sadamj;
 	 int rokGod = trjanjegod - sadagod;
 	 nizTrajanja = (rokMj + rokGod * 12)*2;
-	 std::cout << trajanjemj << " " << trjanjegod << std::endl;
-	 std::cout << rokMj << " " << rokGod << std::endl;
-	 std::cout << nizTrajanja <<std::endl;
+	// std::cout << trajanjemj << " " << trjanjegod << std::endl;
+	 //std::cout << rokMj << " " << rokGod << std::endl;
+	 //std::cout << nizTrajanja <<std::endl;
 	 std::vector<Potrosnja> mjesecnaPotrosnja;
 	
 	std::cout << vrsta << " " << naziv << " " << kolicinaVode << " " << kolicinaProteina << " " << kolicinaMasti << " " << kolicinaUgljikohidrata << " " << dnevnaKolicina << " " << rokTrajanja << " \n";
@@ -51,13 +51,13 @@ Potrosnja::Potrosnja()
 }
 Hrana::~Hrana()
 {
-	std::cout << "destruktor\n";
+	//std::cout << "destruktor\n";
 	
 }
 Hrana::Hrana(const Hrana &drugaHrana)
 {
 
-	std::cout << "Copy konstruktor\n";
+	//std::cout << "Copy konstruktor\n";
 	vrsta = drugaHrana.vrsta;
 	naziv = drugaHrana.naziv;
 	kolicinaVode = drugaHrana.kolicinaVode;
@@ -80,7 +80,7 @@ void Hrana::promjeniPotrosnju(bool promjeni)
 }
 void Hrana::print() const
 {
-	std::cout << vrsta << " " << naziv << " " << kolicinaVode << " " << kolicinaProteina << " " << kolicinaMasti << " " << kolicinaUgljikohidrata << " " << dnevnaKolicina << " " << rokTrajanja << " \n";
+	//std::cout << vrsta << " " << naziv << " " << kolicinaVode << " " << kolicinaProteina << " " << kolicinaMasti << " " << kolicinaUgljikohidrata << " " << dnevnaKolicina << " " << rokTrajanja << " \n";
 }
 
 void Hrana::pratiPotrosnju(int mju, int godu, int portosnjau)
@@ -100,7 +100,7 @@ void Hrana::pratiPotrosnju(int mju, int godu, int portosnjau)
 
 	
 	if (godu > sadagod) {
-		std::cout << "Nemosete dodati za sljedecu godinu \n";
+		//std::cout << "Nemosete dodati za sljedecu godinu \n";
 	}
 	else {
 
@@ -148,11 +148,11 @@ void Hrana::velikiSkok()
 	std::cout << "promjena: " << promjena << "% "<<std::endl;
 	if (promjena > 10)
 	{
-		std::cout << "ovogodisnja potrosnja je porasla za: " << promjena << "% " << std::endl;
+		//std::cout << "ovogodisnja potrosnja je porasla za: " << promjena << "% " << std::endl;
 	}
 	else if (promjena < -10)
 	{
-		std::cout << "ovogodisnja potrosnja je pala za: " << abs(promjena) << "% " << std::endl;
+		//std::cout << "ovogodisnja potrosnja je pala za: " << abs(promjena) << "% " << std::endl;
 	}
 }
 

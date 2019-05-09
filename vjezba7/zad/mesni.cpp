@@ -23,11 +23,7 @@ std::ostream& operator<<(std::ostream &os, Mesni &mesni)
 	os << mesni.naziv << " " << mesni.potrosnjaSamostalno << " kg " << mesni.potrosnjaPrilog << "kg \n";
 	return os;
 }
-std::ostream& operator<<(std::ostream &os, Mesni &mesni)
-{
-	os << mesni.naziv << " " << mesni.potrosnjaSamostalno << " kg " << mesni.potrosnjaPrilog << "kg \n";
-	return os;
-}
+
 
 Meso::Meso(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog, std::string naziv) :
 	Mesni(tip, ime, voda, protein, masti, ugljikohidrati, kolicina, rok, samostalno, prilog)
