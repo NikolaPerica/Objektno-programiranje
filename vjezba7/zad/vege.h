@@ -21,6 +21,7 @@ public:
 	float getPrilogPotrosnja();
 	friend std::istream& operator>>(std::istream &input, Vege &vege);
 	friend std::ostream& operator<<(std::ostream &output, Vege &vege);
+
 };
 
 class Riza : public Vege

@@ -16,13 +16,12 @@ Mesni::~Mesni()
 	std::cout << "destruktor mljecni\n";
 
 }
-float Mesni::getSamostalnaPotrosnja()
+
+
+std::ostream& operator<<(std::ostream &os, Mesni &mesni)
 {
-	return potrosnjaSamostalno;
-}
-float Mesni::getPrilogPotrosnja()
-{
-	return potrosnjaPrilog;
+	os << mesni.naziv << " " << mesni.potrosnjaSamostalno << " kg " << mesni.potrosnjaPrilog << "kg \n";
+	return os;
 }
 std::ostream& operator<<(std::ostream &os, Mesni &mesni)
 {

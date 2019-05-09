@@ -16,19 +16,14 @@ Vege::~Vege()
 	std::cout << "destruktor mljecni\n";
 
 }
-float Vege::getSamostalnaPotrosnja()
-{
-	return potrosnjaSamostalno;
-}
-float Vege::getPrilogPotrosnja()
-{
-	return potrosnjaPrilog;
-}
+
+
 std::ostream& operator<<(std::ostream &os, Vege &vege)
 {
 	os << vege.naziv << " " << vege.potrosnjaSamostalno << " kg " << vege.potrosnjaPrilog << "kg \n";
 	return os;
 }
+
 
 Tofu::Tofu(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog, std::string naziv) :
 	Vege(tip, ime, voda, protein, masti, ugljikohidrati, kolicina, rok, samostalno, prilog)

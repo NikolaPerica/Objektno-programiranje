@@ -3,7 +3,6 @@
 #include "kolaci.h"
 #include <string>
 
-
 Kolaci::Kolaci(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog) :
 	Hrana(tip, ime, voda, protein, masti, ugljikohidrati, kolicina, rok)
 {
@@ -16,14 +15,7 @@ Kolaci::~Kolaci()
 	std::cout << "destruktor mljecni\n";
 
 }
-float Kolaci::getSamostalnaPotrosnja()
-{
-	return potrosnjaSamostalno;
-}
-float Kolaci::getPrilogPotrosnja()
-{
-	return potrosnjaPrilog;
-}
+
 std::ostream& operator<<(std::ostream &os, Kolaci &kolaci)
 {
 	os << kolaci.naziv << " " << kolaci.potrosnjaSamostalno << " kg " << kolaci.potrosnjaPrilog << "kg \n";
