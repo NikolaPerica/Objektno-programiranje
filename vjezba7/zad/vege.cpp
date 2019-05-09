@@ -1,5 +1,8 @@
+#include "pch.h"
 #include "zadatak1/hrana.h"
 #include "vege.h"
+#include <string>
+
 
 Vege::Vege(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog) :
 	Hrana(tip, ime, voda, protein, masti, ugljikohidrati, kolicina, rok)
@@ -20,6 +23,11 @@ float Vege::getSamostalnaPotrosnja()
 float Vege::getPrilogPotrosnja()
 {
 	return potrosnjaPrilog;
+}
+std::ostream& operator<<(std::ostream &os, Vege &vege)
+{
+	os << vege.naziv << " " << vege.potrosnjaSamostalno << " kg " << vege.potrosnjaPrilog << "kg \n";
+	return os;
 }
 
 Tofu::Tofu(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog, std::string naziv) :

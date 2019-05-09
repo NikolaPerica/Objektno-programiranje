@@ -19,6 +19,8 @@ public:
 	~Mljecni();
 	float getSamostalnaPotrosnja();
 	float getPrilogPotrosnja();
+	friend std::istream& operator>>(std::istream &input, Mljecni &mljecni);
+	friend std::ostream& operator<<(std::ostream &output, Mljecni &mljecni);
 };
 
 class Sir : public Mljecni

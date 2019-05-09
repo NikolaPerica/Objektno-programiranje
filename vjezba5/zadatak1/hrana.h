@@ -24,7 +24,7 @@ public:
 
 class Hrana 
 {
-private:
+protected:
 	std::string vrsta;
 	std::string naziv;
 	std::string rokTrajanja; //(datum u formatu dd - mm - yyyy

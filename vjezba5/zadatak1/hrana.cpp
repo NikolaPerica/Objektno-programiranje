@@ -1,3 +1,4 @@
+#include "pch.h"
 #include <iostream>
 #include <string>
 #include <map>
@@ -6,6 +7,7 @@
 #include <math.h>
 #include <stdlib.h>
 #include "hrana.h"
+
 #define _CRT_SECURE_NO_WARNINGS
 
 Potrosnja::Potrosnja()

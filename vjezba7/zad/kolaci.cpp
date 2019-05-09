@@ -1,5 +1,8 @@
+#include "pch.h"
 #include "zadatak1/hrana.h"
 #include "kolaci.h"
+#include <string>
+
 
 Kolaci::Kolaci(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog) :
 	Hrana(tip, ime, voda, protein, masti, ugljikohidrati, kolicina, rok)
@@ -20,6 +23,11 @@ float Kolaci::getSamostalnaPotrosnja()
 float Kolaci::getPrilogPotrosnja()
 {
 	return potrosnjaPrilog;
+}
+std::ostream& operator<<(std::ostream &os, Kolaci &kolaci)
+{
+	os << kolaci.naziv << " " << kolaci.potrosnjaSamostalno << " kg " << kolaci.potrosnjaPrilog << "kg \n";
+	return os;
 }
 
 Madarica::Madarica(std::string tip, std::string ime, int voda, int protein, int masti, int ugljikohidrati, int kolicina, std::string rok, float samostalno, float prilog, std::string naziv) :

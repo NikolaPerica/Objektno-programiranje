@@ -19,6 +19,8 @@ public:
 	~Mesni();
 	float getSamostalnaPotrosnja();
 	float getPrilogPotrosnja();
+	friend std::istream& operator>>(std::istream &input, Mesni &mesni);
+	friend std::ostream& operator<<(std::ostream &output, Mesni &mesni);
 };
 
 class Meso : public Mesni
