@@ -2,5 +2,6 @@
 
 GodofWar::GodofWar()
 {
-	podrzane = {PS4 };
+	podrzane = {"PS4"};
 }
+

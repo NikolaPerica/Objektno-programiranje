@@ -8,6 +8,10 @@ VideoGame::VideoGame()
 
 }
 
+VideoGame::~VideoGame()
+{
+	
+}
 std::string VideoGame::type()
 {
 	return zanr;

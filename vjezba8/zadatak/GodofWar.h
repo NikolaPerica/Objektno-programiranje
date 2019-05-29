@@ -11,5 +11,6 @@ class GodofWar : public Action
 {
 public:
 	GodofWar();
+	
 };
 #endif // !GODOFWAR_H

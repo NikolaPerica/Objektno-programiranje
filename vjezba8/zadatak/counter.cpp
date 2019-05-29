@@ -13,16 +13,28 @@ counter::counter()
 
 void counter::add(VideoGame &game)
 {
-	std::string platfs = game.igranaPlatformama();
+	std::vector<std::string> platfs = game.igranaPlatformama();
+	std::string tmp;
+	std::string PC = { "PC" };
 	
-	for (int i = 0; i < game.podrzane.size; i++)
+	for (std::size_t i = 0;  i < platfs.size(); i++)
 	{
-		if (strcmp(game.podrzane[i], "PC"))
+		tmp = platfs[i];
+		if (tmp.compare(PC))
+		{
+			
 			countPC++;
-		else if (strcmp(game.podrzane[i], "PS4"))
+		}
+		else if (tmp.compare("PS4"))
+		{
+			
 			countPS4++;
-		else if(strcmp(game.podrzane[i], "XBOX"))
+		}
+		else if(tmp.compare("XBOX"))
+		{
+			
 			countXBOX++;
+		}
 	}
 
 }
@@ -38,4 +50,8 @@ std::string counter::najzastupljenija()
 		return "PS4";
 	else if (countXBOX > countPC && countXBOX > countPS4)
 		return "XBOX";
+
+	
+
+	return "Nema najzastupljenije";
 }

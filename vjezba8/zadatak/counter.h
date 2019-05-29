@@ -10,10 +10,10 @@
 
 class counter {
 protected:
-	static int countPC;
-	static int countPS4;
-	static int countXBOX;
-	enum platforms { PC, PS4, XBOX };
+	 int countPC;
+	 int countPS4;
+	 int countXBOX;
+	//enum platforms { PC, PS4, XBOX };
 	//std::vector<platforms> mogucePlatforme { "PC", "PS4", "XBOX" };
 	
 public:

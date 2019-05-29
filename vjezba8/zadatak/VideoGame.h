@@ -15,6 +15,7 @@ protected:
 	std::string zanr;
 public:
 	VideoGame();
+	~VideoGame();
 	std::string type();
 	
 	enum platforms { PC = 0, PS4 = 1, XBOX = 2 };
