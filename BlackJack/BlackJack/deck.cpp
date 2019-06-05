@@ -23,7 +23,7 @@ Deck::Deck()
 				max = dek.size();
 		
 				pos = rand() % (max+1);
-				std::cout<<pos << "\n";
+			
 				dek.insert(dek.begin() + pos, Card(boja[i], nazivKarte[j], j));
 			}
 			

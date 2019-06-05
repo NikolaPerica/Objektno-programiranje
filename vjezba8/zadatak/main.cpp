@@ -19,11 +19,5 @@ int main(void)
 		c.add(*v[i]);
 	std::cout << "Najzastupljenija platforma: " << c.najzastupljenija();
 	
-	//delete[] v;
-
-	for (std::size_t i = 0; i < sz; ++i)
-		delete v[i];
-
-	std::cout << "test";
 	getchar();
 }

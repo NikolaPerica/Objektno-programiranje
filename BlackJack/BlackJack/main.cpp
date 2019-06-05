@@ -5,7 +5,7 @@
 
 int main()
 {
-	std::cout << "radi za sad\n";
+	
 	igraj();
 	
 	getchar();

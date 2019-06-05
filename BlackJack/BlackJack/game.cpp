@@ -10,7 +10,7 @@ void igraj()
 	bool BlackJack = false;
 	bool casinoBlackJack = false;
 	Deck spil;
-	spil.printDeck();
+	//spil.printDeck();
 	Player ja, casino;
 	Card izvucena;
 	std::cout << "Stanje racuna: " << ja.getBalance() << "\n";
@@ -92,16 +92,7 @@ void igraj()
 			std::cout << "Karte kasina: \n";
 			casino.printRuka();
 			std::cout << "Bodovi casina: " << casino.bodovi() << "\n";
-			if (casino.bodovi() > 21)
-			{
-				std::cout << "Casino busted \n";
-				ja.newBalance(ulog*2);
-				std::cout << "Stanje racuna: " << ja.getBalance() << "\n";
-
-				break;
-
-			}
-			else if (casino.bodovi() == 21)
+			if (casino.bodovi() == 21)
 			{
 				std::cout << "BlackJack \n";
 				ja.newBalance(-ulog);
@@ -126,7 +117,7 @@ void igraj()
 			std::cout << "Stanje racuna: " << ja.getBalance() << "\n";
 
 		}
-		else if(ja.bodovi() < casino.bodovi() && casino.bodovi() < 22)
+		else if(ja.bodovi() < casino.bodovi() && casino.bodovi() < 21)
 		{
 
 			ja.newBalance(-ulog);
@@ -146,7 +137,7 @@ void igraj()
 		std::cin >> novaIgra;
 		if (novaIgra == 0)
 		{
-			std::cout << "Izgubili ste"\n";
+			std::cout << "Izgubili ste\n";
 			igraj = false;
 			
 		}
