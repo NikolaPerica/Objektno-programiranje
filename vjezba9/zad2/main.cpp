@@ -16,8 +16,6 @@ int main()
 	Zbroj<char> t('e', 'f');
 	b = t.zbroji();
 
-	std::cout << t.zbroji();
-	getchar();
 
 	return 0;
 }

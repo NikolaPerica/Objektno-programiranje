@@ -35,24 +35,16 @@ protected:
 	char y;
 
 public:
-	Zbroj(char a, char b) { std::cout << "char\n"; x = a; y = b; };
+	Zbroj(char a, char b) 
+	{ 
+		std::cout << "char\n"; 
+		x = a; 
+		y = b;
+	};
 	char zbroji()
 	{
-		char c;
 		
-		if (isdigit(x) && isdigit(y))
-		{
-			std::cout << "digit\n";
-			x = x - '0';
-			y = y - '0';
-			c = x + y;
-		}
-		else {
-			x = x - 'a' + 1;
-			y = y - 'a' + 1;
-			c = x + y;
-		}
-		return c;
+		return x + y - 'a' + 1;
 	};
 };
 

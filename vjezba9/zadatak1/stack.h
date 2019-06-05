@@ -8,11 +8,11 @@ template<typename T>
 class Stog {
 private:
 	const int maxSize = 1000;
-	const int defaultSize = 10;	
+	const int defaultSize = 10;
 	int size, top;
 	T* stackPtr;
 	T* arr;
-	
+
 public:
 	Stog() {
 		std::cout << "Stog kreator" << std::endl;
@@ -33,7 +33,7 @@ public:
 	}
 
 	~Stog() {
-		std::cout << "Stog destructor" << std::endl;
+		//std::cout << "Stog destructor" << std::endl;
 		while (!isEmpty()) {
 			pop();
 		}
@@ -43,7 +43,7 @@ public:
 
 
 	void push(T podatak) {
-		if (this->full()) {
+		if (isFull()) {
 			std::cout << "Stog pun" << std::endl;
 			return;
 		}
@@ -61,7 +61,7 @@ public:
 		stackPtr--;
 		return *stackPtr;
 	}
-	
+
 
 	const bool isFull() {
 		if (top >= size)
@@ -97,7 +97,7 @@ public:
 		return size;
 	}
 
-	
-		
+
+
 };
 #endif
