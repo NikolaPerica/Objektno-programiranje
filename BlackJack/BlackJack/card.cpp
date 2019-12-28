@@ -7,11 +7,7 @@ Card::Card()
 
 
 Card::Card(std::string bojaKarte, std::string rankKarte, int posKarte)
-{
-	boja = bojaKarte;
-	rank = rankKarte;
-	pos = posKarte;
-}
+	:boja(bojaKarte),rank(rankKarte),pos(posKarte) {}
 
 void Card::printCard() const
 {

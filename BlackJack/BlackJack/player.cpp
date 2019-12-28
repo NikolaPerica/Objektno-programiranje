@@ -1,9 +1,7 @@
 #include "player.h"
 
 Player::Player()
-{
-	lova = 1000;
-}
+	:lova(1000) {}
 
 void Player::vuci(Card draw)
 {
