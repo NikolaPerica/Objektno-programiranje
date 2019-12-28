@@ -118,17 +118,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="card.cpp" />
-    <ClCompile Include="deck.cpp" />
-    <ClCompile Include="game.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="player.cpp" />
+    <ClCompile Include="src\card.cpp" />
+    <ClCompile Include="src\deck.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\player.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="card.h" />
-    <ClInclude Include="deck.h" />
-    <ClInclude Include="game.h" />
-    <ClInclude Include="player.h" />
+    <ClInclude Include="src\card.h" />
+    <ClInclude Include="src\deck.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
